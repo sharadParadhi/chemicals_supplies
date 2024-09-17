@@ -1,1 +1,0 @@
-# chemicals_supplies
