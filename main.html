@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chemical Supplies Table</title>
+    <link rel="stylesheet" href="./main.css" type="text/css"/>
+</head>
+<body>
+    <div class="container">
+        <span>
+            <h1>Chemical Supplies</h1>
+            <div class="toolbar">
+                <button id="addRow">➕</button>
+                <button id="moveUp">⬆</button>
+                <button id="moveDown">⬇</button>
+                <button id="deleteRow">🗑</button>
+                <button id="refresh">🔄</button>
+                <button id="save">💾</button>
+                <button id="editRow">✏️</button> 
+            </div>
+        </span>
+
+        <table id="chemicalTable" class="table">
+            <thead>
+                <tr>
+                    <th>Select</th> 
+                    <th onclick="sortTable(0)">ID <span id="sortIcon0">▲</span></th>
+                    <th onclick="sortTable(1)">Chemical Name <span id="sortIcon1">▲</span></th>
+                    <th onclick="sortTable(2)">Vendor <span id="sortIcon2">▲</span></th>
+                    <th onclick="sortTable(3)">Density <span id="sortIcon3">▲</span></th>
+                    <th onclick="sortTable(4)">Viscosity <span id="sortIcon4">▲</span></th>
+                    <th onclick="sortTable(5)">Packaging <span id="sortIcon5">▲</span></th>
+                    <th onclick="sortTable(6)">Pack Size <span id="sortIcon6">▲</span></th>
+                    <th onclick="sortTable(7)">Unit <span id="sortIcon7">▲</span></th>
+                    <th onclick="sortTable(8)">Quantity <span id="sortIcon8">▲</span></th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+                <!-- rows will add by javascript -->
+            </tbody>
+        </table>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>

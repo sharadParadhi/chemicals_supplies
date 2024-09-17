@@ -1,0 +1,187 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f9f9f9;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.table th, .table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.table th {
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    text-transform: uppercase;
+}
+
+.table th:hover {
+    background-color: #45a049;
+}
+
+.table td {
+    color: #333;
+}
+
+
+.selected {
+    background-color: #cfe2ff !important;
+    outline: 2px solid lightgreen;
+}
+
+.selected td {
+    outline-color: lightgreen;
+}
+
+.selected input {
+    background-color: transparent;
+}
+
+
+#tableBody input {
+    border: 0;
+    outline: 0;
+    background: none;
+    text-align: center;
+}
+
+#tableBody input:focus {
+    outline: none !important;
+    border-bottom: 2px solid lightgreen;
+}
+
+
+.toolbar {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.toolbar button {
+    font-size: 18px;
+    margin: 5px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.toolbar button:hover {
+    background-color: #45a049;
+}
+
+.toolbar button:focus {
+    outline: none;
+}
+
+
+th span {
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+
+.table tbody tr:hover {
+    background-color: #f1f1f1;
+    transition: background-color 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .container {
+        padding: 20px;
+    }
+
+    .toolbar button {
+        font-size: 16px;
+        padding: 6px 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    .toolbar button {
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+
+    .table th, .table td {
+        padding: 10px;
+    }
+
+    th span {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    
+    body, .container {
+        background-color: #f9f9f9;
+       
+    }
+
+    
+    .table-wrapper {
+        overflow-x: auto; 
+        -webkit-overflow-scrolling: touch;  
+        background-color: #f9f9f9;  
+        padding: 10px;  
+    }
+
+    
+    .table th, .table td {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    
+    .toolbar button {
+        font-size: 12px;
+        padding: 4px 8px;
+    }
+
+}
+
+
+.checkbox {
+    transform: scale(1.2);
+    opacity: 0.5;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.checkbox:checked {
+    opacity: 1;
+    transform: scale(1.4);
+}
